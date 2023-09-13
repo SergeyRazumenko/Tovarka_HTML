@@ -1,0 +1,103 @@
+/* Delivery Section */
+
+.delivery-description,
+.payment-description {
+    border-radius: 10px;
+    background-color: #F6F7FA;
+    overflow: hidden;
+}
+.delivery-title,
+.payment-title {
+    background-color: #6868AC;
+    color: #fff;
+    min-height: 66px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    font-weight: 600;
+}
+.delivery-methods,
+.payment-methods {
+    margin: 20px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+.delivery-method,
+.payment-method {
+    background-color: #fff;
+    border: 1px solid #CAD4DC;
+    height: 50px;
+    min-width: 140px;
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-basis: 48%;
+    border-radius: 10px;
+}
+.delivery-methods li {
+    flex-grow: 1;
+    display: flex;
+}
+
+.delivery-descriptions {
+    border-radius: 10px;
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid #CAD4DC;
+    background: #E0E6EB;
+    margin: 20px;
+}
+.delivery-descriptions strong {
+    font-weight: 400;
+    text-transform: uppercase;
+    color: #6868AC;
+}
+.payment-text {
+    padding-top: 20px;
+    text-align: center;
+}
+.other-title {
+    margin: 20px;
+    font-size: 20px;
+    font-weight: 500;
+    color: #222;
+    text-align: center;
+}
+.payment-on-receive {
+    border-radius: 10px;
+    padding: 20px;
+    border: 1px solid #CAD4DC;
+    background-color: #F6F7FA;
+}
+
+.icon-button {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    background-color: #6868AC;
+}
+.icon-button svg {
+    fill: #fff;
+}
+
+.payment-on-receive .icons {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+.icons .icon {
+    fill: #222;
+}
+.payment-on-receive .text {
+    text-align: center;
+    padding-top: 20px;
+}

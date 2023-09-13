@@ -1,19 +1,19 @@
 /* Variables */
 
 :root{
-    --tov-powerbank-primary-color: #6868AC;
-    --tov-powerbank-accent-color: #FFC600;
+    --tov-powerbank-primary-color: #{inspect($tov-powerbank-primary-color)};
+    --tov-powerbank-accent-color: #{inspect($tov-powerbank-accent-color)};
 
-    --tov-powerbank-text-color:#465053;
-    --tov-powerbank-text-color-contrast: #fff;
-    --tov-powerbank-text-color-darken: #38385B;
-    --tov-powerbank-text-color-black: #222;
+    --tov-powerbank-text-color:#{inspect($tov-powerbank-text-color)};
+    --tov-powerbank-text-color-contrast: #{inspect($tov-powerbank-text-color-contrast)};
+    --tov-powerbank-text-color-darken: #{inspect($tov-powerbank-text-color-darken)};
+    --tov-powerbank-text-color-black: #{inspect($tov-powerbank-text-color-black)};
 
-    --tov-powerbank-soft-background:#E0E6EB;
-    --tov-powerbank-section-background: #F6F7FA;
-    --tov-powerbank-ribbon-bg: #FF2933;
-    --tov-powerbank-box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.1);
+    --tov-powerbank-soft-background:#{inspect($tov-powerbank-soft-background)};
+    --tov-powerbank-section-background: #{inspect($tov-powerbank-section-background)};
+    --tov-powerbank-ribbon-bg: #{inspect($tov-powerbank-ribbon-bg)};
+    --tov-powerbank-box-shadow: #{inspect($tov-powerbank-box-shadow)};
 
-    --tov-powerbank-border-radius: 10px;
-    --tov-powerbank-border-color: #E5E9EE;
+    --tov-powerbank-border-radius: #{inspect($tov-powerbank-border-radius)};
+    --tov-powerbank-border-color: #{inspect($tov-powerbank-border-color)};
 }

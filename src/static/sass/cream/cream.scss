@@ -7,10 +7,10 @@
 /* General styles */
 
 body {
-    font-family: 'Jost', sans-serif;
+    font-family: 'Inter', sans-serif;
     font-size: 16px;
     line-height: 1.45;
-    color: var(--tov-powerbank-text-color);
+    color: var(--tov-cream-text-color);
 }
 
 section {
@@ -19,32 +19,30 @@ section {
 /* Fonts & typography */
 
 h1{
-    font-weight: 600;
-    font-size: 40px;
-    line-height: 1.125;
+    font-family: 'Atomic Alice Semi';
+    font-weight: 400;
+    font-size: 42px;
+    line-height: normal;
+    color: var(--tov-cream-text-color-white);
 }
 h3{
+    font-family: 'Atomic Alice Semi';
     text-align: center;
-    font-weight: 600;
+    font-weight: 400;
     font-size: 36px;
-    line-height: 1;
+    line-height: 38px;
     padding: 20px;
-    color: var(--tov-powerbank-text-color-darken);
+    color: var(--tov-cream-text-color);
 }
 h4{
     font-size: 20px;
-    font-weight: 600;
+    font-weight: 700;
     text-align: center;
-    color: var(--tov-powerbank-text-color-darken);
-}
-h5{
-    font-weight: 600;
-    color: var(--tov-powerbank-text-color-darken);
-    margin-bottom: 1em;
+    color: var(--tov-cream-text-color);
 }
 strong {
     font-weight: 600;
-    color: var(--tov-powerbank-text-color-darken);
+    color: var(--tov-cream-text-color);
 }
 
 p{
@@ -58,7 +56,7 @@ p:last-child{
     gap: 20px;
 }
 input::placeholder {
-    color: var(--tov-powerbank-text-color);
+    color: var(--tov-cream-text-color);
 }
 
 input{
@@ -68,10 +66,10 @@ input{
     font-size: 18px;
     padding: 0 20px;
     height: 66px;
-    border-radius: var(--tov-powerbank-border-radius);
+    border-radius: var(--tov-cream-border-radius);
     text-align: center;
     font-weight: 400;
-    color: var(--tov-powerbank-text-color-black);
+    color: var(--tov-cream-text-color-black);
 }
 select{
     width: 100%;
@@ -80,11 +78,11 @@ select{
     font-size: 18px;
     padding: 0 20px;
     height: 66px;
-    border-radius: var(--tov-powerbank-border-radius);
+    border-radius: var(--tov-cream-border-radius);
     text-align: center;
     font-weight: 400;
-    color: var(--tov-powerbank-text-color-darken);
-    background-color: var(--tov-powerbank-section-background);
+    color: var(--tov-cream-text-color-darken);
+    background-color: var(--tov-cream-section-background);
     -webkit-appearance: none;
     -moz-appearance: none;
 }
@@ -99,13 +97,21 @@ button{
     display: block;
 }
 
+/* Helper */
+
+.cream-color-white {
+    color: var(--tov-cream-text-color-white);
+}
+
+/* END Helper */
+
 /* Title section */
 
 .item-title{
     padding: 20px;
     margin: 0;
-    background: var(--tov-powerbank-primary-color);
-    color: var(--tov-powerbank-text-color-contrast);
+    background: var(--tov-cream-primary-color);
+    color: var(--tov-cream-text-color-white);
     text-align: center;
 }
 .item-title .subtitle{
@@ -116,75 +122,74 @@ button{
 
 /* Item's primary image */
 
-.item-image-price{
-    margin-bottom: -20px;
+.main-image-wrapper{
+    position: relative;
+    overflow: hidden;
+    padding-left: 20px;
+    margin-left: auto;
+    background-color: var(--tov-cream-primary-color);
+
+    img {
+        border-radius: 0 40px;
+        position: relative;
+        z-index: 5;
+    }
 }
 .discount-label{
-    height: 36px;
-    line-height: 36px;
+    width: 140px;
+    position: absolute;
+    top: 0;
+    left: 20px;
+    z-index: 10;
+    text-align: center;
+    height: 40px;
+    line-height: 40px;
     font-weight: 500;
-    color: var(--tov-powerbank-text-color-contrast);
-    background-color: var(--tov-powerbank-ribbon-bg);
+    border-radius: 0 0 20px 0;
+    color: var(--tov-cream-text-color-white);
+    background-color: var(--tov-cream-accent-color);
+}
+.item-image-price{
+    display: flex;
+    flex-direction: column;
 }
 
 /* Item's pricing */
 
 .pricing-block{
-    border-radius: var(--tov-powerbank-border-radius);
-    background:var(--tov-powerbank-primary-color);
-    color: var(--tov-powerbank-text-color-contrast);
+    border-radius: var(--tov-cream-border-radius);
+    background: var(--tov-cream-primary-color);
+    color: var(--tov-cream-text-color-white);
     display: flex;
     flex-direction: row;
-    text-align: center;
     position: relative;
-    padding: 20px 0 10px 0;
+    overflow: hidden;
     top: -40px;
-    margin: 0 20px;
-
-    &:before{
-        content: "";
-        width: 1px;
-        height: 85px;
-        background: #FFFFFF;
-        mix-blend-mode: overlay;
-        opacity: 0.3;
-        position: absolute;
-        left: 50%;
-        top: 20px;
-        z-index: 30;
-    }
-
-    &:after{
-        content: "";
-        width: 0;
-        height: 0;
-        border-style: solid;
-        border-width: 21px 193px 0;
-        border-color: var(--tov-powerbank-primary-color) transparent transparent transparent;
-        z-index: 10;
-        border-radius: 10px;
-        position: absolute;
-        bottom: -20px;
-    }
+    border-radius: var(--tov-cream-border-radius);
 
     & > * {
         width: 50%;
+        padding: 60px 20px 20px 40px;
+
+        &:first-child {
+            background-color: var(--tov-cream-green-color);
+        }
+
+        &:last-child {
+            background-color: var(--tov-cream-accent-color);
+        }
     }
 
     .label{
         font-weight: 500;
-        padding: 2px 10px;
+        padding: 2px 0;
     }
 
     .current-price .label{
-        color: var(--tov-powerbank-text-color-darken);
+        color: var(--tov-cream-text-color-darken);
         border-radius: 5px;
-        background-color: var(--tov-powerbank-accent-color);
+        background-color: var(--tov-cream-accent-color);
         display: inline-block;
-    }
-
-    .price{
-        font-style: italic;
     }
 
     .old-price {
@@ -200,7 +205,7 @@ button{
                     position: absolute;
                     top: calc(50% - 2px);
                     left: 0;
-                    background-color: var(--tov-powerbank-accent-color);
+                    background-color: var(--tov-cream-text-color-white);
                 }
             }
         }
@@ -208,14 +213,14 @@ button{
 
     .value{
         font-weight: 700;
-        font-size: 36px;
+        font-size: 42px;
     }
 
     .currency{
-        font-size: 18px;
+        font-weight: 500;
+        font-size: 24px;
     }
 }
-
 
 /* Main Item Advantages */
 
@@ -227,7 +232,7 @@ button{
         margin-top: 20px;
         padding-bottom: 20px;
         position: relative;
-        border-bottom: 1px solid var(--tov-powerbank-border-color);
+        border-bottom: 1px solid var(--tov-cream-border-color);
     }
 
     .checkmark{
@@ -237,14 +242,14 @@ button{
         left: 0;
         top: 5px;
         border-radius: 5px;
-        background: var(--tov-powerbank-soft-background);
+        background: var(--tov-cream-soft-background);
         display: inline-flex;
         align-items: center;
         justify-content: center;
     }
 
     .checkmark svg{
-        stroke: var(--tov-powerbank-primary-color);
+        stroke: var(--tov-cream-primary-color);
     }
 
     li:last-of-type{
@@ -260,10 +265,10 @@ button{
     display: flex;
     align-items: center;
     justify-content: center;
-    background: var(--tov-powerbank-accent-color);
-    border-radius: var(--tov-powerbank-border-radius);
-    box-shadow: var(--tov-powerbank-box-shadow);
-    color: var(--tov-powerbank-text-color-darken);
+    background: var(--tov-cream-accent-color);
+    border-radius: var(--tov-cream-border-radius);
+    box-shadow: var(--tov-cream-box-shadow);
+    color: var(--tov-cream-text-color-darken);
     font-weight: 600;
     font-size: 24px;
     line-height: 35px;
@@ -278,10 +283,10 @@ button{
     justify-content: center;
     font-size: 18px;
     font-weight: 500;
-    color: var(--tov-powerbank-text-color-darken);
-    background: var(--tov-powerbank-soft-background);
-    border: 2px dashed var(--tov-powerbank-primary-color);
-    border-radius: var(--tov-powerbank-border-radius);
+    color: var(--tov-cream-text-color-darken);
+    background: var(--tov-cream-soft-background);
+    border: 2px dashed var(--tov-cream-primary-color);
+    border-radius: var(--tov-cream-border-radius);
 
     strong{
         padding: 0 10px;
@@ -290,7 +295,7 @@ button{
 
 /* Discount section */
 .group-discount{
-    background: var(--tov-powerbank-section-background);
+    background: var(--tov-cream-section-background);
 }
 
 .discount-list{
@@ -302,8 +307,8 @@ button{
         justify-content: space-between;
         margin-bottom: 20px;
         border-radius: 12px;
-        background-color: var(--tov-powerbank-soft-background);
-        color: var(--tov-powerbank-text-color-darken);
+        background-color: var(--tov-cream-soft-background);
+        color: var(--tov-cream-text-color-darken);
         height: 66px;
         align-items: center;
         font-weight: 600;
@@ -317,24 +322,24 @@ button{
     width: 78px;
     height: 66px;
     padding-right: 8px;
-    color: var(--tov-powerbank-text-color-contrast);
+    color: var(--tov-cream-text-color-white);
     justify-content: center;
     align-items: center;
     position: relative;
     mask: url("../../img/powerbank/small-right-chevron.svg") no-repeat;
     -webkit-mask: url("../../img/powerbank/small-right-chevron.svg") no-repeat;
-    background: var(--tov-powerbank-primary-color);
+    background: var(--tov-cream-primary-color);
     background-size: 78px 66px;
     filter: drop-shadow(0 0 15px rgba(0, 0, 0, 0.2));
 }
 .discounted-price {
     font-size: 28px;
-    color: var(--tov-powerbank-text-color-darken);
+    color: var(--tov-cream-text-color-darken);
 }
 .discount {
-    color: var(--tov-powerbank-text-color-darken);
+    color: var(--tov-cream-text-color-darken);
     border-radius: 5px;
-    background-color: var(--tov-powerbank-accent-color);
+    background-color: var(--tov-cream-accent-color);
     font-weight: 500;
     padding: 2px 10px;
     font-style: italic;
@@ -344,9 +349,9 @@ button{
 
 .countdown__timer{
     height: 124px;
-    border-radius: var(--tov-powerbank-border-radius);
-    background: var(--tov-powerbank-section-background);
-    color: var(--tov-powerbank-text-color-darken);
+    border-radius: var(--tov-cream-border-radius);
+    background: var(--tov-cream-section-background);
+    color: var(--tov-cream-text-color-darken);
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -365,8 +370,8 @@ button{
     &:first-of-type{
         mask: url("../../img/powerbank/big-right-chevron.svg") center / contain no-repeat;
         -webkit-mask: url("../../img/powerbank/big-right-chevron.svg") center / contain no-repeat;
-        background: var(--tov-powerbank-primary-color);
-        color: var(--tov-powerbank-text-color-contrast);
+        background: var(--tov-cream-primary-color);
+        color: var(--tov-cream-text-color-white);
         width: 146px;
         filter: drop-shadow(0 0 15px rgba(0, 0, 0, 0.2));
     }
@@ -392,13 +397,13 @@ button{
     padding: 20px;
     text-align: center;
     font-size: 14px;
-    border-radius: var(--tov-powerbank-border-radius);
+    border-radius: var(--tov-cream-border-radius);
 }
 
 /* Description section */
 
 .detailed-description {
-    background-color: var(--tov-powerbank-section-background);
+    background-color: var(--tov-cream-section-background);
     padding: 0 20px 20px 20px;
     margin-bottom: 0;
 }
@@ -408,7 +413,7 @@ button{
 .detailed-description picture,
 .detailed-description video,
 .yt-video{
-    border-radius: var(--tov-powerbank-border-radius);
+    border-radius: var(--tov-cream-border-radius);
     overflow: hidden;
 }
 
@@ -419,17 +424,17 @@ button{
 /* Benefits section */
 
 .benefits{
-    background-color: var(--tov-powerbank-primary-color);
+    background-color: var(--tov-cream-primary-color);
     padding-bottom: 20px;
 
     .section-title{
-        color: var(--tov-powerbank-text-color-contrast);
+        color: var(--tov-cream-text-color-white);
     }
 }
 
 .benefit-item{
-    background-color: var(--tov-powerbank-section-background);
-    border-radius: var(--tov-powerbank-border-radius);
+    background-color: var(--tov-cream-section-background);
+    border-radius: var(--tov-cream-border-radius);
     padding: 20px;
     margin-bottom: 20px;
 
@@ -447,7 +452,7 @@ button{
             height: 29px;
             mask: url("../../img/powerbank/benefit-arrow.svg") center / contain no-repeat;
             -webkit-mask: url("../../img/powerbank/benefit-arrow.svg") center / contain no-repeat;
-            background-color: var(--tov-powerbank-primary-color);
+            background-color: var(--tov-cream-primary-color);
         }
     }
 }
@@ -456,7 +461,7 @@ button{
 /* Steps section */
 
 .step-to-step{
-    background-color: var(--tov-powerbank-section-background);
+    background-color: var(--tov-cream-section-background);
     overflow: hidden;
 
     .steps-list{
@@ -483,7 +488,7 @@ button{
             &:last-child .step-number{
                 width: 51px;
                 height: 49px;
-                border-radius: var(--tov-powerbank-border-radius);
+                border-radius: var(--tov-cream-border-radius);
                 mask: none;
                 -webkit-mask:none;
             }
@@ -497,8 +502,8 @@ button{
         height: 56px;
         mask: url("../../img/powerbank/step-bg.svg") center / contain no-repeat;
         -webkit-mask: url("../../img/powerbank/step-bg.svg") center / contain no-repeat;
-        background-color: var(--tov-powerbank-primary-color);
-        color: var(--tov-powerbank-text-color-contrast);
+        background-color: var(--tov-cream-primary-color);
+        color: var(--tov-cream-text-color-white);
         font-weight: 600;
         font-size: 20px;
         text-align: center;
@@ -506,8 +511,8 @@ button{
     }
 
     .step-description{
-        background-color: var(--tov-powerbank-soft-background);
-        border-radius: var(--tov-powerbank-border-radius);
+        background-color: var(--tov-cream-soft-background);
+        border-radius: var(--tov-cream-border-radius);
         position: relative;
         padding: 20px;
 
@@ -522,7 +527,7 @@ button{
             position: absolute;
             left: -7px;
             top: calc(50% - 5px);
-            border-color: transparent var(--tov-powerbank-soft-background) transparent transparent;
+            border-color: transparent var(--tov-cream-soft-background) transparent transparent;
         }
     }
 }
@@ -535,11 +540,11 @@ button{
 }
 #character-slider img,
 #character-thumb-slider .splide__slide{
-    border-radius: var(--tov-powerbank-border-radius);
+    border-radius: var(--tov-cream-border-radius);
 }
 
 #character-thumb-slider .splide__slide.is-active{
-    border: 2px solid var(--tov-powerbank-primary-color);
+    border: 2px solid var(--tov-cream-primary-color);
 }
 #character-thumb-slider .splide__slide.is-active:before{
     content: "";
@@ -550,7 +555,7 @@ button{
     height: 20px;
     mask: url("../../img/powerbank/benefit-arrow.svg") center / contain no-repeat;
     -webkit-mask: url("../../img/powerbank/benefit-arrow.svg") center / contain no-repeat;
-    background-color: var(--tov-powerbank-primary-color);
+    background-color: var(--tov-cream-primary-color);
     transform: rotate( -90deg );
 }
 
@@ -580,7 +585,7 @@ button{
         border-bottom: 1px solid #D6D6D3;
 
         &:nth-child(even) {
-            background: var(--tov-powerbank-section-background);
+            background: var(--tov-cream-section-background);
         }
     }
 }
@@ -588,13 +593,13 @@ button{
 /* Reviews section */
 
 section.reviews{
-    background-color: var(--tov-powerbank-primary-color);
+    background-color: var(--tov-cream-primary-color);
     padding: 20px;
     margin-bottom: 0;
 }
 
 .reviews .section-title{
-    color: var(--tov-powerbank-text-color-contrast);
+    color: var(--tov-cream-text-color-white);
 }
 /* Reviews Slider */
 #reviews-slider-avatars{
@@ -602,16 +607,16 @@ section.reviews{
 }
 #reviews-slider-avatars .splide__slide{
     border-radius: 100%;
-    border: 2px solid var(--tov-powerbank-section-background);
+    border: 2px solid var(--tov-cream-section-background);
 }
 #reviews-slider-avatars .splide__slide.is-active{
-    border-color: var(--tov-powerbank-accent-color);
+    border-color: var(--tov-cream-accent-color);
 }
 #reviews-slider-avatars-list{
     justify-content: center;
 }
 .review-item-vertical{
-    border-radius: var(--tov-powerbank-border-radius);
+    border-radius: var(--tov-cream-border-radius);
     overflow: hidden;
 }
 
@@ -623,7 +628,7 @@ section.reviews{
 
 .review-item-content{
     position: relative;
-    background-color: var(--tov-powerbank-section-background);
+    background-color: var(--tov-cream-section-background);
 }
 .review-item-vertical .review-author{
     display: flex;
@@ -639,14 +644,14 @@ section.reviews{
     width: 80px;
     height: 80px;
     border-radius: 100%;
-    border: 2px solid var(--tov-powerbank-section-background);
+    border: 2px solid var(--tov-cream-section-background);
 }
 .review-item-vertical .review-author-name{
-    color: var(--tov-powerbank-text-color-black);
+    color: var(--tov-cream-text-color-black);
     font-size: 20px;
 }
 .review-item-horizontal .review-item-content{
-    border-radius: var(--tov-powerbank-border-radius);
+    border-radius: var(--tov-cream-border-radius);
 }
 .review-item-horizontal .review-author{
     display: flex;
@@ -660,7 +665,7 @@ section.reviews{
 }
 
 .review-item-horizontal .review-author{
-    color: var(--tov-powerbank-text-color-contrast);
+    color: var(--tov-cream-text-color-white);
 }
 .review-item-horizontal .name{
     font-size: 20px;
@@ -669,7 +674,7 @@ section.reviews{
 .review-title{
     font-weight: 700;
     margin-bottom: 10px;
-    color: var(--tov-powerbank-text-color-black);
+    color: var(--tov-cream-text-color-black);
 }
 .review-text{
     padding: 20px;
@@ -691,7 +696,7 @@ section.reviews{
     height: 0;
     border-style: solid;
     border-width: 18px 16px 0 0;
-    border-color: var(--tov-powerbank-section-background) transparent transparent transparent;
+    border-color: var(--tov-cream-section-background) transparent transparent transparent;
     transform: rotate(5deg);
 
 }
@@ -702,7 +707,7 @@ section.reviews{
     left: auto;
     right: 60px;
     border-width: 18px 0 0 16px;
-    border-color: var(--tov-powerbank-section-background) transparent transparent transparent;
+    border-color: var(--tov-cream-section-background) transparent transparent transparent;
     transform: rotate(-5deg);
 }
 .review-item-horizontal:nth-of-type(even) .review-author{
@@ -713,7 +718,7 @@ section.reviews{
 /* How to checkout section */
 
 .how-to-checkout{
-    background-color: var(--tov-powerbank-section-background);
+    background-color: var(--tov-cream-section-background);
     padding: 20px;
 }
 
@@ -754,8 +759,8 @@ section.reviews{
     height: 46px;
     mask: url("../../img/powerbank/small-right-chevron.svg") center / contain no-repeat;
     -webkit-mask: url("../../img/powerbank/small-right-chevron.svg") center / contain no-repeat;
-    background-color: var(--tov-powerbank-primary-color);
-    color: var(--tov-powerbank-text-color-contrast);
+    background-color: var(--tov-cream-primary-color);
+    color: var(--tov-cream-text-color-white);
     font-weight: 600;
     font-size: 20px;
     text-align: center;
@@ -774,15 +779,15 @@ section.reviews{
     align-items: center;
     font-size: 18px;
     font-weight: 600;
-    color: var(--tov-powerbank-text-color-contrast);
-    background-color: var(--tov-powerbank-primary-color);
-    border-radius: var(--tov-powerbank-border-radius);
+    color: var(--tov-cream-text-color-white);
+    background-color: var(--tov-cream-primary-color);
+    border-radius: var(--tov-cream-border-radius);
 }
 .how-to-checkout .step-text{
     margin-top: 10px;
     padding: 20px;
     background-color: #fff;
-    border-radius: var(--tov-powerbank-border-radius);
+    border-radius: var(--tov-cream-border-radius);
     text-align: center;
 }
 
@@ -790,15 +795,14 @@ section.reviews{
     padding-top: 20px;
 }
 
-
 /* Footer design */
 
 .site-footer{
     background-color: #2C2C40;
-    color: var(--tov-powerbank-text-color-contrast);
+    color: var(--tov-cream-text-color-white);
 }
 .site-footer a{
-    color: var(--tov-powerbank-accent-color);
+    color: var(--tov-cream-accent-color);
 }
 .footer-text{
     text-align: center;
@@ -819,12 +823,12 @@ section.reviews{
     flex-basis: 50%;
     padding: 20px;
     font-size: 15px;
-    background-color: var(--tov-powerbank-text-color-darken);
-    border-radius: var(--tov-powerbank-border-radius);
+    background-color: var(--tov-cream-text-color-darken);
+    border-radius: var(--tov-cream-border-radius);
 }
 
 .footer-icon{
-    fill: var(--tov-powerbank-accent-color);
+    fill: var(--tov-cream-accent-color);
 }
 
 .footer-menu {
