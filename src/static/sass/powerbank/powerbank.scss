@@ -1,0 +1,895 @@
+/*
+ * Power Bank Theme
+*/
+@import "variables";
+@import "root";
+
+/* General styles */
+
+body {
+    font-family: 'Jost', sans-serif;
+    font-size: 16px;
+    line-height: 1.45;
+    color: var(--tov-powerbank-text-color);
+}
+
+section {
+    margin-bottom: 20px;
+}
+/* Fonts & typography */
+
+h1{
+    font-weight: 600;
+    font-size: 40px;
+    line-height: 1.125;
+}
+h3{
+    text-align: center;
+    font-weight: 600;
+    font-size: 36px;
+    line-height: 1;
+    padding: 20px;
+    color: var(--tov-powerbank-text-color-darken);
+}
+h4{
+    font-size: 20px;
+    font-weight: 600;
+    text-align: center;
+    color: var(--tov-powerbank-text-color-darken);
+}
+h5{
+    font-weight: 600;
+    color: var(--tov-powerbank-text-color-darken);
+    margin-bottom: 1em;
+}
+strong {
+    font-weight: 600;
+    color: var(--tov-powerbank-text-color-darken);
+}
+
+p{
+    margin-bottom: 1em;
+}
+p:last-child{
+    margin: 0;
+}
+.gallery{
+    display: flex;
+    gap: 20px;
+}
+input::placeholder {
+    color: var(--tov-powerbank-text-color);
+}
+
+input{
+    width: 100%;
+    display: block;
+    border: 1px solid #CAD4DC;
+    font-size: 18px;
+    padding: 0 20px;
+    height: 66px;
+    border-radius: var(--tov-powerbank-border-radius);
+    text-align: center;
+    font-weight: 400;
+    color: var(--tov-powerbank-text-color-black);
+}
+select{
+    width: 100%;
+    display: block;
+    border: 1px solid #CAD4DC;
+    font-size: 18px;
+    padding: 0 20px;
+    height: 66px;
+    border-radius: var(--tov-powerbank-border-radius);
+    text-align: center;
+    font-weight: 400;
+    color: var(--tov-powerbank-text-color-darken);
+    background-color: var(--tov-powerbank-section-background);
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+button{
+    width: 100%;
+    border: none;
+    cursor: pointer;
+    font-weight: 600;
+}
+.control-wrap{
+    margin-bottom: 20px;
+    display: block;
+}
+
+/* Title section */
+
+.item-title{
+    padding: 20px;
+    margin: 0;
+    background: var(--tov-powerbank-primary-color);
+    color: var(--tov-powerbank-text-color-contrast);
+    text-align: center;
+}
+.item-title .subtitle{
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 1.4;
+}
+
+/* Item's primary image */
+
+.item-image-price{
+    margin-bottom: -20px;
+}
+.discount-label{
+    height: 36px;
+    line-height: 36px;
+    font-weight: 500;
+    color: var(--tov-powerbank-text-color-contrast);
+    background-color: var(--tov-powerbank-ribbon-bg);
+}
+
+/* Item's pricing */
+
+.pricing-block{
+    border-radius: var(--tov-powerbank-border-radius);
+    background:var(--tov-powerbank-primary-color);
+    color: var(--tov-powerbank-text-color-contrast);
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    position: relative;
+    padding: 20px 0 10px 0;
+    top: -40px;
+    margin: 0 20px;
+}
+.pricing-block:before{
+    content: "";
+    width: 1px;
+    height: 85px;
+    background: #FFFFFF;
+    mix-blend-mode: overlay;
+    opacity: 0.3;
+    position: absolute;
+    left: 50%;
+    top: 20px;
+    z-index: 30;
+}
+.pricing-block:after{
+    content: "";
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 21px 193px 0;
+    border-color: var(--tov-powerbank-primary-color) transparent transparent transparent;
+    z-index: 10;
+    border-radius: 10px;
+    position: absolute;
+    bottom: -20px;
+}
+
+.pricing-block > * {
+    width: 50%;
+}
+.pricing-block .label{
+    font-weight: 500;
+    padding: 2px 10px;
+}
+.pricing-block .current-price .label{
+    color: var(--tov-powerbank-text-color-darken);
+    border-radius: 5px;
+    background-color: var(--tov-powerbank-accent-color);
+    display: inline-block;
+}
+.pricing-block .price{
+    font-style: italic;
+
+}
+.pricing-block .value{
+    font-weight: 700;
+    font-size: 36px;
+}
+.pricing-block .currency{
+    font-size: 18px;
+}
+
+/* Main Item Advantages */
+
+.advantages-list {
+    list-style: none;
+}
+.advantages-list li {
+    padding-left: 50px;
+    margin-top: 20px;
+    padding-bottom: 20px;
+    position: relative;
+    border-bottom: 1px solid var(--tov-powerbank-border-color);
+}
+.advantages-list .checkmark{
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    left: 0;
+    top: 5px;
+    border-radius: 5px;
+    background: var(--tov-powerbank-soft-background);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+.advantages-list .checkmark svg{
+    stroke: var(--tov-powerbank-primary-color);
+}
+.advantages-list li:last-of-type{
+    border: none;
+    padding-bottom: 0;
+}
+/* Button */
+.big-button {
+    min-height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--tov-powerbank-accent-color);
+    border-radius: var(--tov-powerbank-border-radius);
+    box-shadow: var(--tov-powerbank-box-shadow);
+    color: var(--tov-powerbank-text-color-darken);
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 35px;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+/* Items remain block */
+.items-remain{
+    min-height: 66px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    font-weight: 500;
+    color: var(--tov-powerbank-text-color-darken);
+    background: var(--tov-powerbank-soft-background);
+    border: 2px dashed var(--tov-powerbank-primary-color);
+    border-radius: var(--tov-powerbank-border-radius);
+}
+.items-remain strong{
+    padding: 0 10px;
+}
+/* Discount section */
+.group-discount{
+    background: var(--tov-powerbank-section-background);
+}
+.discount-list{
+    overflow: hidden;
+}
+.discount-list li{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    border-radius: 12px;
+    background-color: var(--tov-powerbank-soft-background);
+    color: var(--tov-powerbank-text-color-darken);
+    height: 66px;
+    align-items: center;
+    font-weight: 600;
+    padding-right: 20px;
+}
+.discount-quantity {
+    font-size: 20px;
+    display: flex;
+    width: 78px;
+    height: 66px;
+    padding-right: 8px;
+    color: var(--tov-powerbank-text-color-contrast);
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    mask: url("../img/powerbank/small-right-chevron.svg") no-repeat;
+    -webkit-mask: url("../img/powerbank/small-right-chevron.svg") no-repeat;
+    background: var(--tov-powerbank-primary-color);
+    background-size: 78px 66px;
+    filter: drop-shadow(0 0 15px rgba(0, 0, 0, 0.2));
+}
+.discounted-price {
+    font-size: 28px;
+    color: var(--tov-powerbank-text-color-darken);
+}
+.discount {
+    color: var(--tov-powerbank-text-color-darken);
+    border-radius: 5px;
+    background-color: var(--tov-powerbank-accent-color);
+    font-weight: 500;
+    padding: 2px 10px;
+    font-style: italic;
+}
+
+/* Countdown section */
+
+.countdown__timer{
+    height: 124px;
+    border-radius: var(--tov-powerbank-border-radius);
+    background: var(--tov-powerbank-section-background);
+    color: var(--tov-powerbank-text-color-darken);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 20px 0;
+}
+.countdown__item {
+    text-align: center;
+    padding-right: 12px;
+    height: 124px;
+    width: 33%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+}
+.countdown__item:first-of-type{
+    mask: url("../img/powerbank/big-right-chevron.svg") center / contain no-repeat;
+    -webkit-mask: url("../img/powerbank/big-right-chevron.svg") center / contain no-repeat;
+    background: var(--tov-powerbank-primary-color);
+    color: var(--tov-powerbank-text-color-contrast);
+    width: 146px;
+    filter: drop-shadow(0 0 15px rgba(0, 0, 0, 0.2));
+}
+.countdown__item:nth-of-type(2){
+    background: url("../img/powerbank/counter-bg-delim.png") right top no-repeat;
+    background-size: contain;
+    width: 140px;
+}
+.countdown__value {
+    display: block;
+    font-size: 42px;
+    line-height: 60px;
+    font-weight: 600;
+    font-variant-numeric: tabular-nums;
+}
+
+.info-block {
+    background: #FFFFEF;
+    border: 1px solid #FFC600;
+    padding: 20px;
+    text-align: center;
+    font-size: 14px;
+    border-radius: var(--tov-powerbank-border-radius);
+}
+
+/* Description section */
+
+.detailed-description {
+    background-color: var(--tov-powerbank-section-background);
+    padding: 0 20px 20px 20px;
+    margin-bottom: 0;
+}
+
+.detailed-description img,
+.detailed-description object,
+.detailed-description picture,
+.detailed-description video,
+.yt-video{
+    border-radius: var(--tov-powerbank-border-radius);
+    overflow: hidden;
+}
+
+.yt-video,.gallery{
+    margin-bottom: 16px;
+}
+
+/* Benefits section */
+
+.benefits{
+    background-color: var(--tov-powerbank-primary-color);
+    padding-bottom: 20px;
+}
+.benefits .section-title{
+    color: var(--tov-powerbank-text-color-contrast);
+}
+.benefit-item{
+    background-color: var(--tov-powerbank-section-background);
+    border-radius: var(--tov-powerbank-border-radius);
+    padding: 20px;
+    margin-bottom: 20px;
+}
+.benefit-item .title{
+    text-align: left;
+    position: relative;
+    padding-bottom: 5px;
+}
+.benefit-item .title:before{
+    content: "";
+    position: absolute;
+    left: -21px;
+    top: 0;
+    width: 15px;
+    height: 29px;
+    mask: url("../img/powerbank/benefit-arrow.svg") center / contain no-repeat;
+    -webkit-mask: url("../img/powerbank/benefit-arrow.svg") center / contain no-repeat;
+    background-color: var(--tov-powerbank-primary-color);
+}
+
+/* Steps section */
+
+.step-to-step{
+    background-color: var(--tov-powerbank-section-background);
+    overflow: hidden;
+}
+.step-to-step .steps-list{
+    position: relative;
+}
+.step-to-step .steps-list:after{
+    content: "";
+    display: block;
+    position: absolute;
+    width: 0;
+    top:50px;
+    bottom:50px;
+    left:24px;
+    border-right: 2px dashed #CAD4DC;
+}
+.step-to-step .steps-list li{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap:20px;
+    margin-bottom: 20px;
+}
+.step-to-step .step-number{
+    position: relative;
+    z-index: 5;
+    min-width: 51px;
+    height: 56px;
+    mask: url("../img/powerbank/step-bg.svg") center / contain no-repeat;
+    -webkit-mask: url("../img/powerbank/step-bg.svg") center / contain no-repeat;
+    background-color: var(--tov-powerbank-primary-color);
+    color: var(--tov-powerbank-text-color-contrast);
+    font-weight: 600;
+    font-size: 20px;
+    text-align: center;
+    line-height: 50px;
+}
+.step-to-step .steps-list li:last-child .step-number{
+    width: 51px;
+    height: 49px;
+    border-radius: var(--tov-powerbank-border-radius);
+    mask: none;
+    -webkit-mask:none;
+}
+
+.step-to-step .step-description{
+    background-color: var(--tov-powerbank-soft-background);
+    border-radius: var(--tov-powerbank-border-radius);
+    position: relative;
+    padding: 20px;
+}
+.step-to-step .step-description:before{
+    content: "";
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 5px 12px 5px 0;
+    display: block;
+
+    position: absolute;
+    left: -7px;
+    top: calc(50% - 5px);
+    border-color: transparent var(--tov-powerbank-soft-background) transparent transparent;
+}
+
+/* Characteristics Section */
+
+#character-slider img{
+    min-width: 100%;
+}
+#character-slider img,
+#character-thumb-slider .splide__slide{
+    border-radius: var(--tov-powerbank-border-radius);
+}
+
+#character-thumb-slider .splide__slide.is-active{
+    border: 2px solid var(--tov-powerbank-primary-color);
+}
+#character-thumb-slider .splide__slide.is-active:before{
+    content: "";
+    position: absolute;
+    left: calc(50% - 4px);
+    top: -19px;
+    width: 8px;
+    height: 20px;
+    mask: url("../img/powerbank/benefit-arrow.svg") center / contain no-repeat;
+    -webkit-mask: url("../img/powerbank/benefit-arrow.svg") center / contain no-repeat;
+    background-color: var(--tov-powerbank-primary-color);
+    transform: rotate( -90deg );
+}
+
+#character-thumb-slider{
+    margin-top: 20px;
+}
+
+#character-thumb-slider .splide__track{
+    overflow: visible;
+}
+#character-thumb-slider .splide__arrows,
+#reviews-slider-avatars .splide__arrows{
+    display: none;
+}
+
+
+.characteristics__list{
+    padding: 0;
+    margin: 20px 0;
+}
+
+.characteristics__list li {
+    padding: 20px;
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #D6D6D3;
+}
+
+.characteristics__list li:nth-child(even) {
+    background: var(--tov-powerbank-section-background);
+}
+
+/* Reviews section */
+
+section.reviews{
+    background-color: var(--tov-powerbank-primary-color);
+    padding: 20px;
+    margin-bottom: 0;
+}
+
+.reviews .section-title{
+    color: var(--tov-powerbank-text-color-contrast);
+}
+/* Reviews Slider */
+#reviews-slider-avatars{
+    padding: 20px 0;
+}
+#reviews-slider-avatars .splide__slide{
+    border-radius: 100%;
+    border: 2px solid var(--tov-powerbank-section-background);
+}
+#reviews-slider-avatars .splide__slide.is-active{
+    border-color: var(--tov-powerbank-accent-color);
+}
+#reviews-slider-avatars-list{
+    justify-content: center;
+}
+.review-item-vertical{
+    border-radius: var(--tov-powerbank-border-radius);
+    overflow: hidden;
+}
+
+/* Reviews list */
+
+.review-item-horizontal{
+    margin-bottom: 20px;
+}
+
+.review-item-content{
+    position: relative;
+    background-color: var(--tov-powerbank-section-background);
+}
+.review-item-vertical .review-author{
+    display: flex;
+    flex-direction: row;
+    align-items: end;
+    gap: 20px;
+    position: relative;
+    top: -40px;
+    margin-bottom: -40px;
+    padding: 0 20px;
+}
+.review-item-avatar{
+    width: 80px;
+    height: 80px;
+    border-radius: 100%;
+    border: 2px solid var(--tov-powerbank-section-background);
+}
+.review-item-vertical .review-author-name{
+    color: var(--tov-powerbank-text-color-black);
+    font-size: 20px;
+}
+.review-item-horizontal .review-item-content{
+    border-radius: var(--tov-powerbank-border-radius);
+}
+.review-item-horizontal .review-author{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    margin-top: 20px;
+}
+.review-item-horizontal .review-item-avatar{
+    width: 50px;
+    height: 50px;
+}
+
+.review-item-horizontal .review-author{
+    color: var(--tov-powerbank-text-color-contrast);
+}
+.review-item-horizontal .name{
+    font-size: 20px;
+    font-weight: 600;
+}
+.review-title{
+    font-weight: 700;
+    margin-bottom: 10px;
+    color: var(--tov-powerbank-text-color-black);
+}
+.review-text{
+    padding: 20px;
+    position: relative;
+}
+
+.author-city{
+    display: block;
+}
+
+.review-item-horizontal .review-text:after{
+    content: "";
+    display: block;
+    position: absolute;
+    left: 60px;
+    bottom: -16px;
+
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 18px 16px 0 0;
+    border-color: var(--tov-powerbank-section-background) transparent transparent transparent;
+    transform: rotate(5deg);
+
+}
+.review-item-horizontal:nth-of-type(even) .review-text:after{
+    content: "";
+    display: block;
+    position: absolute;
+    left: auto;
+    right: 60px;
+    border-width: 18px 0 0 16px;
+    border-color: var(--tov-powerbank-section-background) transparent transparent transparent;
+    transform: rotate(-5deg);
+}
+.review-item-horizontal:nth-of-type(even) .review-author{
+    flex-direction: row-reverse;
+    text-align: right;
+}
+
+/* How to checkout section */
+
+.how-to-checkout{
+    background-color: var(--tov-powerbank-section-background);
+    padding: 20px;
+}
+
+.how-to-checkout .checkout-step{
+    display: flex;
+    flex-direction: row;
+    align-items: start;
+    gap:20px;
+    padding-bottom: 20px;
+    position: relative;
+}
+.how-to-checkout .checkout-step:last-of-type{
+    padding-bottom: 0;
+}
+.how-to-checkout .checkout-step:last-of-type:before{
+    display: none;
+}
+.how-to-checkout .checkout-step:before{
+    content: "";
+    display: block;
+    position: absolute;
+    width: 0;
+    top:10px;
+    bottom:0;
+    left:24px;
+    border-right: 2px dashed #CAD4DC;
+}
+
+.how-to-checkout .step-number{
+    position: relative;
+    z-index: 5;
+    min-width: 56px;
+    height: 46px;
+    mask: url("../img/powerbank/small-right-chevron.svg") center / contain no-repeat;
+    -webkit-mask: url("../img/powerbank/small-right-chevron.svg") center / contain no-repeat;
+    background-color: var(--tov-powerbank-primary-color);
+    color: var(--tov-powerbank-text-color-contrast);
+    font-weight: 600;
+    font-size: 20px;
+    text-align: center;
+    line-height: 48px;
+    padding-right: 4px;
+}
+.how-to-checkout .step-description{
+    flex-grow: 1;
+}
+.how-to-checkout .step-title{
+    min-height: 46px;
+    padding: 0 20px;
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--tov-powerbank-text-color-contrast);
+    background-color: var(--tov-powerbank-primary-color);
+    border-radius: var(--tov-powerbank-border-radius);
+}
+.how-to-checkout .step-text{
+    margin-top: 10px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: var(--tov-powerbank-border-radius);
+    text-align: center;
+}
+
+.order-form{
+    padding-top: 20px;
+}
+
+/* Delivery Section */
+
+.delivery-description,
+.payment-description {
+    border-radius: var(--tov-powerbank-border-radius);
+    background-color: var(--tov-powerbank-section-background);
+    overflow: hidden;
+}
+.delivery-title,
+.payment-title {
+    background-color: var(--tov-powerbank-primary-color);
+    color: var(--tov-powerbank-text-color-contrast);
+    min-height: 66px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    font-weight: 600;
+}
+.delivery-methods,
+.payment-methods{
+    margin: 20px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+.delivery-method,
+.payment-method{
+    background-color: #fff;
+    border: 1px solid #CAD4DC;
+    height: 50px;
+    min-width: 140px;
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-basis: 48%;
+    border-radius: var(--tov-powerbank-border-radius);
+}
+.delivery-methods li {
+    flex-grow: 1;
+    display: flex;
+}
+
+.delivery-descriptions{
+    border-radius: var(--tov-powerbank-border-radius);
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid #CAD4DC;
+    background: var(--tov-powerbank-soft-background);
+    margin: 20px;
+}
+.delivery-descriptions strong{
+    font-weight: 400;
+    text-transform: uppercase;
+    color: var(--tov-powerbank-primary-color);
+}
+.payment-text{
+    padding-top: 20px;
+    text-align: center;
+}
+.other-title{
+    margin: 20px;
+    font-size: 20px;
+    font-weight: 500;
+    color: var(--tov-powerbank-text-color-black);
+    text-align: center;
+}
+.payment-on-receive{
+    border-radius: var(--tov-powerbank-border-radius);
+    padding: 20px;
+    border: 1px solid #CAD4DC;
+    background-color: var(--tov-powerbank-section-background);
+}
+
+.icon-button{
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: var(--tov-powerbank-border-radius);
+    background-color: var(--tov-powerbank-primary-color);
+}
+.icon-button svg {
+    fill: var(--tov-powerbank-text-color-contrast);
+}
+
+.payment-on-receive .icons{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+.icons .icon{
+    fill: var(--tov-powerbank-text-color-black);
+}
+.payment-on-receive .text{
+    text-align: center;
+    padding-top: 20px;
+}
+
+/* Footer design */
+
+.site-footer{
+    background-color: #2C2C40;
+    color: var(--tov-powerbank-text-color-contrast);
+}
+.site-footer a{
+    color: var(--tov-powerbank-accent-color);
+}
+.footer-text{
+    text-align: center;
+    padding: 20px;
+}
+.footer-text h4 {
+    margin-bottom: 10px;
+}
+.footer-contacts {
+    display: flex;
+    gap: 20px;
+    padding: 0 20px;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.footer-contact-item{
+    flex-basis: 50%;
+    padding: 20px;
+    font-size: 15px;
+    background-color: var(--tov-powerbank-text-color-darken);
+    border-radius: var(--tov-powerbank-border-radius);
+}
+
+.footer-icon{
+    fill: var(--tov-powerbank-accent-color);
+}
+
+.footer-menu {
+    padding: 20px;
+}
+.footer-menu:before{
+    content: "";
+    display: block;
+    background-color: #253644;
+    height: 1px;
+}
+.footer-menu ul {
+    padding-top: 20px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+.footer-menu li {
+    white-space: nowrap;
+}
