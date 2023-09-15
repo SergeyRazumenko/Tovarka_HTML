@@ -71,13 +71,13 @@
 }
 
 @font-face {
-    font-family: 'Atomic Alice';
-    src: url('../../fonts/cream/Alice/AtomicAlice-Regular.eot');
-    src: local('Atomic Alice Regular'), local('AtomicAlice-Regular'),
-        url('../../fonts/cream/Alice/AtomicAlice-Regular.eot?#iefix') format('embedded-opentype'),
-        url('../../fonts/cream/Alice/AtomicAlice-Regular.woff2') format('woff2'),
-        url('../../fonts/cream/Alice/AtomicAlice-Regular.woff') format('woff'),
-        url('../../fonts/cream/Alice/AtomicAlice-Regular.ttf') format('truetype');
+    font-family: 'Alice';
+    src: url('../../fonts/cream/Alice/Alice-Regular.eot');
+    src: local('Alice Regular'), local('Alice-Regular'),
+        url('../../fonts/cream/Alice/Alice-Regular.eot?#iefix') format('embedded-opentype'),
+        url('../../fonts/cream/Alice/Alice-Regular.woff2') format('woff2'),
+        url('../../fonts/cream/Alice/Alice-Regular.woff') format('woff'),
+        url('../../fonts/cream/Alice/Alice-Regular.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }

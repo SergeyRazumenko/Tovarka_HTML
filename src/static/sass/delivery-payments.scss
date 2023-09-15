@@ -101,3 +101,145 @@
     text-align: center;
     padding-top: 20px;
 }
+
+
+/* Delivery Section (CREAM)*/
+
+.delivery-cream {
+    border-radius: 40px 40px 0 0;
+    background-color: #FFF8F1;
+    padding: 40px 20px 20px;
+    margin-bottom: 0;
+
+    .delivery-description {
+        border-radius: 0;
+        background-color: transparent;
+    }
+
+    .delivery-title {
+        background-color: transparent;
+        color: #2B2320;
+        min-height: unset;
+        font-size: 36px;
+        font-weight: 400;
+    }
+
+    .delivery-methods {
+        margin: 20px 0 0;
+    }
+
+    .delivery-method {
+        background-color: transparent;
+        border: none;
+        height: unset;
+        border-radius: 0;
+    }
+
+    .delivery-descriptions {
+        border-radius: 0;
+        padding: 0;
+        border: none;
+        background: transparent;
+        margin: 20px 0;
+    }
+
+    .delivery {
+        border-radius: 10px;
+        background-color: #FFF;
+        padding: 20px;
+        border: 1px solid #DACABD;
+        color: #2B2320;
+        text-align: center;
+        font-size: 16px;
+        font-weight: 500;
+        line-height: normal;
+        position: relative;
+
+        &:before {
+            content: "";
+            display: block;
+            width: 18px;
+            height: 18px;
+            position: absolute;
+            bottom: calc(100% - 8px);
+            left: 20%;
+            transform: translate(-50%,0);
+            z-index: 5;
+            background-color: #FFF;
+            transform: rotate(45deg);
+            border-left: 1px solid #DACABD;
+            border-top: 1px solid #DACABD;
+        }
+    }
+
+    .delivery-descriptions strong {
+        color: #FABC26;
+        font-weight: 700;
+    }
+}
+
+
+/* Payment Section (CREAM)*/
+
+.payment-cream {
+    background-color: #FFF8F1;   
+    padding: 0 20px 60px;
+    margin-bottom: 0;
+
+     .payment-description {
+        border-radius: 0;
+        background-color: transparent;
+    }
+
+    .payment-method {
+        background-color: transparent;
+        border: none;
+        height: unset;
+        border-radius: 0;
+    }
+
+    .payment-methods {
+        margin: 20px 0 0;
+    }
+
+    .payment-title {
+        background-color: transparent;
+        color: #2B2320;
+        min-height: unset;
+        font-size: 36px;
+        font-weight: 400;
+    }
+
+    .payment-on-receive .text, .payment-text {
+        color: #2B2320;
+        text-align: center;
+        font-size: 16px;
+        font-weight: 700;
+        line-height: normal;
+
+        span {
+            color: #D04931;
+        }
+    }
+
+    .payment-methods {
+        flex-wrap: nowrap;
+        gap: 10px;
+    }
+
+    .payment-method {
+        background-color: transparent;
+        border: none;
+        height: unset;
+        min-width: unset;
+        flex-basis: unset;
+        border-radius: 0;
+    }
+
+    .payment-on-receive {
+        border-radius: 0;
+        padding: 0;
+        border: 0;
+        background-color: transparent;
+    }    
+}

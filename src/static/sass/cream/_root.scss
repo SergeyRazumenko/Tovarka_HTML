@@ -3,7 +3,10 @@
 :root{
     --tov-cream-primary-color: #{inspect($tov-cream-primary-color)};
     --tov-cream-accent-color: #{inspect($tov-cream-accent-color)};
+    --tov-cream-third-color: #{inspect($tov-cream-third-color)};
     --tov-cream-green-color: #{inspect($tov-cream-green-color)};
+
+    --tov-cream-body-background: #{inspect($tov-cream-body-background)};
 
     --tov-cream-text-color:#{inspect($tov-cream-text-color)};
     --tov-cream-text-color-white: #{inspect($tov-cream-text-color-white)};
@@ -11,9 +14,8 @@
 
     --tov-cream-soft-background:#{inspect($tov-cream-soft-background)};
     --tov-cream-section-background: #{inspect($tov-cream-section-background)};
-    --tov-cream-ribbon-bg: #{inspect($tov-cream-ribbon-bg)};
-    --tov-cream-box-shadow: #{inspect($tov-cream-box-shadow)};
 
     --tov-cream-border-radius: #{inspect($tov-cream-border-radius)};
+    --tov-cream-arrow-border-radius: #{inspect($tov-cream-arrow-border-radius)};
     --tov-cream-border-color: #{inspect($tov-cream-border-color)};
 }
