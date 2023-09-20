@@ -84,18 +84,49 @@ document.addEventListener( 'DOMContentLoaded', function () {
     const creamReviewsSlider = document.getElementById("cream-reviews-slider");
     const initCreamReviewsSlider = function(slider) {
 
-        var creamCharacter = new Splide( slider, {
+        var creamReview = new Splide( slider, {
             type      : 'loop',
             rewind    : true,
             fixedHeight: true,
             arrows    : false,
           } );
           
-          creamCharacter.mount();
+          creamReview.mount();
     }
 
     creamReviewsSlider ? initCreamReviewsSlider(creamReviewsSlider) : '';
 
+     /* Builder Characteristics slider init */
+
+     const builderCharacterSlider = document.getElementById("builder-character-slider");
+     const initBuilderCharacterSlider = function(slider) {
+ 
+         var builderCharacter = new Splide( slider, {
+            type   : 'loop',
+           } );
+           
+           builderCharacter.mount();
+     }
+ 
+     builderCharacterSlider ? initBuilderCharacterSlider(builderCharacterSlider) : '';
+
+     /* Builder Review slider init */
+
+    const builderReviewsSlider = document.getElementById("builder-reviews-slider");
+    const initBuilderReviewsSlider = function(slider) {
+
+        var builderReview = new Splide( slider, {
+            type      : 'loop',
+            rewind    : true,
+            fixedHeight: true,
+          } );
+          
+          builderReview.mount();
+    }
+
+    builderReviewsSlider ? initBuilderReviewsSlider(builderReviewsSlider) : '';
+
+     
     const tabs = new Tabby('[data-tabs]');
 
 } );

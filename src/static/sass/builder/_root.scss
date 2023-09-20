@@ -1,0 +1,19 @@
+/* Variables */
+
+:root{
+    --tov-builder-primary-color: #{inspect($tov-builder-primary-color)};
+    --tov-builder-accent-color: #{inspect($tov-builder-accent-color)};
+
+    --tov-builder-text-color:#{inspect($tov-builder-text-color)};
+    --tov-builder-text-color-contrast: #{inspect($tov-builder-text-color-contrast)};
+    --tov-builder-text-color-darken: #{inspect($tov-builder-text-color-darken)};
+    --tov-builder-text-color-black: #{inspect($tov-builder-text-color-black)};
+
+    --tov-builder-soft-background:#{inspect($tov-builder-soft-background)};
+    --tov-builder-section-background: #{inspect($tov-builder-section-background)};
+    --tov-builder-ribbon-bg: #{inspect($tov-builder-ribbon-bg)};
+    --tov-builder-box-shadow: #{inspect($tov-builder-box-shadow)};
+
+    --tov-builder-border-radius: #{inspect($tov-builder-border-radius)};
+    --tov-builder-border-color: #{inspect($tov-builder-border-color)};
+}
