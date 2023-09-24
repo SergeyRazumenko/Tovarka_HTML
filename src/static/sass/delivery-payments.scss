@@ -407,3 +407,219 @@
         }
     }
 }
+
+
+/* Delivery Section (MILITARIS)*/
+
+.delivery-militaris {
+    border-radius: 0;
+    background-color: #F2F2F2;
+    padding: 20px;
+    margin-bottom: 0;
+
+    .delivery-description {
+        border-radius: 0;
+        background-color: transparent;
+        overflow: visible;
+    }
+
+    .delivery-methods {
+        position: relative;
+        margin: 20px 0 30px;
+    }
+
+    .delivery-title {
+        background-color: transparent;
+        min-height: unset;
+        text-align: center;
+        font-size: 32px;
+        font-style: normal;
+        font-weight: 800;
+        line-height: 32px;
+        text-transform: uppercase;
+        color: #242226;
+    }
+
+    .delivery-methods li {
+        margin-bottom: 20px;
+    }
+
+    .delivery-method {
+        background-color: transparent;
+        border: none;
+        height: unset;
+        border-radius: 0;
+        flex-basis: 50%;
+        max-width: 50%;
+    }
+
+    .delivery-descriptions {
+        border-radius: 0;
+        padding: 0;
+        border: none;
+        background: transparent;
+        margin: 20px 0;
+    }
+
+    .delivery {
+        border-radius: 10px;
+        background-color: #FFF;
+        padding: 20px;
+        border: 1px dashed #C5C5C5;
+        color: #2B2320;
+        text-align: left;
+        font-size: 15px;
+        flex-basis: 45%;
+        max-width: 45%;
+        position: absolute;
+        right: 0;
+        top: 0;
+
+        strong {
+            color: #FABC26;
+        }
+
+        &:before {
+            content: "";
+            display: block;
+            width: 18px;
+            height: 18px;
+            position: absolute;
+            left: -9px;
+            transform: translate(-50%,0);
+            z-index: 5;
+            background-color: #FFF;
+            transform: rotate(-45deg);
+            border-left: 1px dashed #C5C5C5;
+            border-top: 1px dashed #C5C5C5;
+        }
+    }
+
+    .delivery[id="up"] {
+
+        &:before {
+            top: 20px;
+        }
+    }
+
+    .delivery[id="np"] {
+
+        &:before {
+            bottom: 60px;
+        }
+    }
+
+    .delivery-descriptions strong {
+        color: #FABC26;
+        font-weight: 700;
+    }   
+}
+
+/* Payment Section (MILITARIS)*/
+
+.payment-militaris {
+    background-color: #F2F2F2;   
+    padding: 0 20px 20px;
+    margin-bottom: 20px;
+    position: relative;
+    z-index: 14;
+
+     .payment-description {
+        border-radius: 0;
+        background-color: transparent;
+    }
+
+    .payment-method {
+        background-color: #fff;
+        border: 0;
+        height: 65px;
+        min-width: 140px;
+        border-radius: 0;
+    }
+
+    .payment-methods {
+        margin: 20px 0 0;
+    }
+
+    .payment-title {
+        background-color: transparent;
+        color: #242226;
+        min-height: unset;
+        font-size: 32px;
+        font-style: normal;
+        font-weight: 800;
+        line-height: 32px;
+        text-transform: uppercase;
+    }
+
+    .payment-text {
+        color: #242226;
+        text-align: center;
+        font-style: normal;
+        font-weight: 800;
+        line-height: 20px;
+
+        span {
+            color: #BF544B;
+        }
+    }
+
+    .payment-on-receive {
+        padding: 0;
+        border: 0;
+        background-color: #fff;
+        display: flex;
+        align-items: stretch;
+        border-radius: 0;
+        overflow: hidden;
+        margin-top: 10px;
+
+        .text {
+            color: #242226;
+            text-align: left;
+            padding: 20px;
+            position: relative;
+
+            h6 {
+                margin-bottom: 10px;
+            }
+
+            &::before {
+                content: '';
+                width: 0;
+                height: 0;
+                border-style: solid;
+                border-width: 10px 0 10px 20px;
+                border-color: transparent transparent transparent #ffffff;
+                position: absolute;
+                left: 100%;
+                top: 50%;
+                transform: translate(0, -50%);
+            }
+
+            span {
+                color: #222;
+            }
+        }
+
+        .icon {
+            min-width: 130px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #A2A694;
+        }
+    } 
+
+    .icon-bg {
+        background-color: inherit;
+        background-size: cover;
+        mask: url("../img/militaris/icon-bg.svg");
+        position: absolute;
+        bottom: -45px;
+        left: 0;
+        width: 100%;
+        height: 120px;
+        z-index: -1;
+    }   
+}

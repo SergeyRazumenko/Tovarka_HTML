@@ -126,6 +126,31 @@ document.addEventListener( 'DOMContentLoaded', function () {
 
     builderReviewsSlider ? initBuilderReviewsSlider(builderReviewsSlider) : '';
 
+    /* Militaris Characteristics slider init */
+
+    const militarisCharacterSlider = document.getElementById("militaris-character-slider");
+    const initMilitarisCharacterSlider = function(slider) {
+
+        var militarisCharacter = new Splide( slider);
+          
+          militarisCharacter.mount();
+    }
+
+    militarisCharacterSlider ? initMilitarisCharacterSlider(militarisCharacterSlider) : '';
+
+
+     /* Militaris Review slider init */
+
+     const militarisReviewsSlider = document.getElementById("militaris-reviews-slider");
+     const initMilitarisReviewsSlider = function(slider) {
+ 
+         var militarisReview = new Splide( slider);
+           
+           militarisReview.mount();
+     }
+ 
+     militarisReviewsSlider ? initMilitarisReviewsSlider(militarisReviewsSlider) : '';
+
      
     const tabs = new Tabby('[data-tabs]');
 

@@ -1,0 +1,19 @@
+/* Variables */
+
+:root{
+    --tov-militaris-primary-color: #{inspect($tov-militaris-primary-color)};
+    --tov-militaris-accent-color: #{inspect($tov-militaris-accent-color)};
+
+    --tov-militaris-text-color:#{inspect($tov-militaris-text-color)};
+    --tov-militaris-text-color-contrast: #{inspect($tov-militaris-text-color-contrast)};
+    --tov-militaris-text-color-darken: #{inspect($tov-militaris-text-color-darken)};
+    --tov-militaris-text-color-black: #{inspect($tov-militaris-text-color-black)};
+
+    --tov-militaris-soft-background:#{inspect($tov-militaris-soft-background)};
+    --tov-militaris-section-background: #{inspect($tov-militaris-section-background)};
+    --tov-militaris-ribbon-bg: #{inspect($tov-militaris-ribbon-bg)};
+    --tov-militaris-box-shadow: #{inspect($tov-militaris-box-shadow)};
+
+    --tov-militaris-border-radius: #{inspect($tov-militaris-border-radius)};
+    --tov-militaris-border-color: #{inspect($tov-militaris-border-color)};
+}

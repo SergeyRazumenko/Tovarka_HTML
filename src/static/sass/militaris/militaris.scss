@@ -1,0 +1,1202 @@
+/*
+ * Militaris Bank Theme
+*/
+@import "variables";
+@import "root";
+
+/* General styles */
+
+body {
+    font-family: 'Nunito Sans', sans-serif;
+    font-size: 16px;
+    line-height: 1.45;
+    color: var(--tov-militaris-text-color);
+}
+
+section {
+    margin-bottom: 20px;
+}
+/* Fonts & typography */
+
+h1 {
+    font-family: 'Nunito Sans';
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 900;
+    line-height: normal;
+    text-transform: uppercase;
+    text-align: center;
+}
+h3 {
+    text-align: center;
+    font-family: 'Nunito Sans';
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: 32px;
+    padding: 20px 0;
+}
+h4 {
+    text-align: center;
+    font-family: 'Nunito Sans';
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: 32px;
+}
+
+h5 {
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: 24px;
+    margin-bottom: 20px;
+}
+
+h6 {
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: 20px;
+    margin-bottom: 20px;
+}
+strong {
+    font-weight: 700;
+    color: var(--tov-militaris-text-color-darken);
+}
+
+p{
+    margin-bottom: 1em;
+}
+p:last-child{
+    margin: 0;
+}
+.gallery{
+    display: flex;
+    gap: 20px;
+}
+input::placeholder {
+    color: var(--tov-militaris-text-color-black);
+}
+
+input{ 
+    width: 100%;
+    display: block;
+    border: 1px solid #C5C5C5;
+    padding: 0 20px;
+    height: 70px;
+    border-radius: var(--tov-militaris-border-radius);
+    color: var(--tov-militaris-text-color);
+}
+select {
+    width: 100%;
+    display: block;
+    border: 1px solid #C5C5C5;
+    padding: 0 20px;
+    height: 70px;
+    border-radius: var(--tov-militaris-border-radius);
+    color: var(--tov-militaris-text-color);
+    background-color: var(--tov-militaris-text-color-contrast);
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+button{
+    width: 100%;
+    border: none;
+    cursor: pointer;
+    font-weight: 700;
+}
+.control-wrap{
+    margin-bottom: 20px;
+    display: block;
+}
+
+.padding-bottom-170 {
+    padding-bottom: 170px;
+}
+
+/* Title section */
+
+.section-title .icon {
+    max-width: 60px;
+}
+
+.item-title{
+    padding: 20px;
+    margin: 0;
+    background: var(--tov-militaris-primary-color);
+    text-align: center;
+    position: relative;
+    z-index: 6;
+
+    .icon-bg {
+        background-color: inherit;
+        background-size: cover;
+        mask: url("../../img/militaris/icon-bg.svg");
+        position: absolute;
+        top: 20px;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+    }
+
+}
+.item-title .subtitle{
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 1.4;
+    color: #EDEDED;
+}
+
+/* Item's primary image */
+
+.discount-label {
+    width: 170px;
+    position: absolute;
+    top: 40px;
+    left: -35px;
+    transform: rotate(-45deg);
+    z-index: 10;
+    text-align: center;
+    height: 30px;
+    line-height: 28px;
+    font-size: 14px;
+    font-weight: 700;
+    background-color: var(--tov-militaris-ribbon-bg);
+    color: var(--tov-militaris-soft-background);
+}
+
+/* Item's pricing */
+
+.pricing-block{
+    background:var(--tov-militaris-soft-background);
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+
+    & > * {
+        width: 50%;
+        padding: 20px;
+    }
+
+    .label{
+        padding: 2px 10px;
+        color: var(--tov-militaris-text-color-darken);
+    }
+
+    .current-price {
+        background-color: var(--tov-militaris-accent-color);
+
+        .label{
+            color: var(--tov-militaris-soft-background);
+        }
+
+        .price {
+            color: var(--tov-militaris-soft-background);
+        }
+    }
+
+    .old-price {
+        .price{
+            .value{
+                position: relative;
+    
+                &:before {
+                    content: '';
+                    display: block;
+                    width: 100%;
+                    height: 2px;
+                    position: absolute;
+                    top: calc(50% - 2px);
+                    left: 0;
+                    background-color: var(--tov-militaris-text-color);
+                }
+            }
+        }
+    }
+
+    .value {
+        font-family: 'Archivo';
+        font-size: 36px;
+        font-style: normal;
+        font-weight: 800;
+        line-height: normal;
+    }
+
+    .currency {
+        font-family: 'Archivo';
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 800;
+        line-height: normal;
+
+    }
+}
+
+
+/* Main Item Advantages */
+
+.advantages-list {
+    list-style: none;
+
+    li {
+        padding: 20px 20px 20px 40px;
+        position: relative;
+        border-bottom: 1px solid var(--tov-militaris-border-color);
+        display: flex;
+        align-items: flex-start;
+        gap: 20px;
+    }
+
+    .checkmark {
+        width: 30px;
+        height: 30px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    li:last-of-type {
+        border: none;
+    }
+}
+
+
+/* Button */
+.big-button {
+    min-height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--tov-militaris-ribbon-bg);
+    border-radius: var(--tov-militaris-border-radius);
+    color: var(--tov-militaris-soft-background);
+    font-weight: 800;
+    font-size: 24px;
+    line-height: 35px;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+/* Items remain block */
+.items-remain {
+    padding: 20px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--tov-militaris-text-color-darken);
+
+    strong {
+        font-weight: 800;
+        margin: 0 8px;
+        color: var(--tov-militaris-soft-background);
+        border-radius: 100%;
+        width: 30px;
+        height: 30px;
+        background-color: var(--tov-militaris-accent-color);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        line-height: 1;
+    }
+}
+
+/* Discount section */
+.group-discount{
+    background: var(--tov-militaris-soft-background);
+    position: relative;
+    margin-top: 25px;
+    margin-bottom: 0;
+    padding-bottom: 40px;
+    z-index: 14;
+
+    .icon-bg {
+        background-color: inherit;
+        background-size: cover;
+        -webkit-mask: url(../../img/militaris/icon-bg1.svg);
+        mask: url(../../img/militaris/icon-bg1.svg);
+        position: absolute;
+        top: -27px;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+    }
+}
+
+.discount-list{
+    overflow: hidden;
+
+    li{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        margin-bottom: 5px;
+        align-items: center;
+    }
+}
+
+.discount-quantity {
+    font-size: 24px;
+    font-family: 'Archivo';
+    font-style: normal;
+    font-weight: 500;
+    line-height: 32px;
+}
+.discounted-price {
+    font-size: 24px;
+    font-family: 'Archivo';
+    font-style: normal;
+    font-weight: 800;
+    line-height: 32px;
+}
+.discount {
+    font-size: 20px;
+    font-weight: 600;
+    height: 40px;
+    width: 150px;
+    min-width: 150px;
+    padding: 4px 10px;
+    margin-left: 15px;
+    text-align: center;
+    color: var(--tov-militaris-soft-background);
+    background-color: var(--tov-militaris-primary-color);
+    position: relative;
+
+    &:before {
+        content: '';
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 4px 8px 4px 0;
+        border-color: transparent var(--tov-militaris-primary-color) transparent transparent;
+        position: absolute;
+        top: 50%;
+        left: -8px;
+        transform: translate(0, -50%);
+    }
+}
+
+/* Countdown section */
+
+.countdown {
+    background-color: var(--tov-militaris-text-color);
+    position: relative;
+    padding-top: 40px;
+    z-index: 2;
+    margin-bottom: 26px;
+    z-index: 13;
+
+    .section-title {
+        margin-bottom: 20px;
+        color: var(--tov-militaris-soft-background);
+    }
+
+    .icon-bg {
+        background-color: inherit;
+        background-size: cover;
+        -webkit-mask: url(../../img/militaris/icon-bg.svg);
+        mask: url(../../img/militaris/icon-bg.svg);
+        position: absolute;
+        bottom: -27px;
+        left: 0;
+        width: 100%;
+        height: 120px;
+        z-index: -1;
+    }
+}
+
+.countdown__timer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 20px 0;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    color: var(--tov-militaris-text-color-contrast);
+}
+.countdown__item {
+    text-align: center;
+    margin: 0 10px;
+    height: 110px;
+    width: 29%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    border-radius: var(--tov-militaris-border-radius);
+
+    &:first-of-type {
+        margin-left: 0;
+    }
+
+    &:last-of-type {
+        margin-right: 0;
+    }
+}
+
+.countdown__value {
+    display: block;
+    font-family: 'Archivo';
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: normal;
+    font-variant-numeric: tabular-nums;
+    padding: 14px;
+    background: rgba(0, 0, 0, 0.40);
+}
+.countdown__label {
+    padding: 10px;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    background: rgba(0, 0, 0, 0.30);
+}
+.info-block {
+    text-align: center;
+    font-size: 14px;
+    padding-bottom: 10px;
+
+    strong {
+        font-weight: 400;
+        color: var(--tov-militaris-soft-background);
+    }
+
+    p {
+        color: #A2A694;
+    }
+}
+
+/* Description section */
+
+.detailed-description {
+    position: relative;
+    background-color: var(--tov-militaris-text-color-contrast);
+    z-index: 3;
+    margin-bottom: 25px;
+    z-index: 12;
+
+    strong {
+        font-weight: 500;
+        color: var(--tov-militaris-text-color-black);
+    }
+
+    .icon-bg {
+        background-size: cover;
+        -webkit-mask: url(../../img/militaris/icon-bg.svg);
+        mask: url(../../img/militaris/icon-bg.svg);
+        position: absolute;
+        bottom: -52px;
+        left: 0;
+        width: 100%;
+        height: 120px;
+        background-color: inherit;
+        z-index: -1;
+    }
+}
+
+.detailed-description img,
+.detailed-description object,
+.detailed-description picture,
+.detailed-description video,
+.yt-video{
+    border-radius: var(--tov-militaris-border-radius);
+    overflow: hidden;
+}
+
+.yt-video,.gallery, .wp-picture {
+    margin-bottom: 16px;
+}
+
+.wp-block-image.alignleft {
+    margin-left: -20px;
+}
+
+.wp-block-image.alignright {
+    margin-right: -20px;
+}
+
+.wp-block-image.aligncenter {
+    margin-left: -20px;
+    margin-right: -20px;
+}
+
+.yt-video {
+    position: relative;
+    margin-left: -20px;
+    margin-right: -20px;
+
+    .overlay {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        left: 0;
+        top: 0;
+        background-color: #38385B;
+        opacity: .2;
+    }
+
+    .video-control {
+        z-index: 5;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        -webkit-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+    }
+}
+
+/* Benefits section */
+
+.benefits{
+    background-color: var(--tov-militaris-primary-color);
+    padding: 40px 0 0;
+    position: relative;
+    z-index: 2;
+    margin-bottom: 0;
+    z-index: 11;
+
+    .icon-bg {
+        background-color: inherit;
+        background-size: cover;
+        mask: url("../../img/militaris/icon-bg.svg");
+        position: absolute;
+        bottom: -32px;
+        left: 0;
+        width: 100%;
+        height: 120px;
+        z-index: -1;
+    }
+
+    .big-button {
+        margin-top: 40px;
+    }
+
+    .section-title,
+    .section-subtitle {
+        color: var(--tov-militaris-soft-background);
+        text-align: center;
+        padding: 0 20px;
+    }
+
+    .section-subtitle {
+        font-weight: 700;
+        margin: 20px 0;
+    }
+}
+
+.benefit-item {
+    background-color: var(--tov-militaris-text-color-contrast);
+    display: flex;
+
+    .title {
+        text-align: left;
+        position: relative;
+        padding-bottom: 5px;
+        font-style: normal;
+        font-weight: 800;
+        line-height: 20px;
+        text-transform: uppercase;
+        font-size: 16px;
+    }
+
+    .benefit-item-content {
+        padding: 30px 20px;
+        flex-basis: 50%;
+        position: relative;
+
+        &:before {
+            content: "";
+            width: 0;
+            height: 0;
+            border-style: solid;
+            border-width: 10px 12px 10px 0;
+            border-color: transparent var(--tov-militaris-text-color-contrast) transparent transparent;
+            position: absolute;
+            top: 50%;
+            left: -12px;
+            -webkit-transform: translate(0,-50%);
+            -ms-transform: translate(0,-50%);
+            transform: translate(0,-50%);
+        }
+    }
+
+    .benefit-item-thumb {
+        flex-basis: 50%;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+
+    &:nth-child(even) {
+        flex-direction: row-reverse;
+
+        .benefit-item-content:before {
+            transform: rotate(180deg);
+            left: 100%;
+            
+        }
+    }
+}
+
+
+/* Steps section */
+
+.step-to-step {
+    background-color: var(--tov-militaris-soft-background);
+    padding: 20px 20px 0;
+    position: relative;
+    z-index: 1;
+    margin-bottom: 30px;
+    z-index: 10;
+
+    .icon-bg {
+        background-color: inherit;
+        background-size: cover;
+        mask: url("../../img/militaris/icon-bg.svg");
+        position: absolute;
+        bottom: -36px;
+        left: 0;
+        width: 100%;
+        height: 120px;
+        z-index: -1;
+    }
+
+    .steps-list{
+        position: relative;
+
+        li{
+            display: flex;
+            flex-direction: row;
+            align-items: stretch;
+            margin-bottom: 20px;
+            background-color:  var(--tov-militaris-text-color-contrast);
+            position: relative;
+        }
+    }
+
+    .step-number {
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        font-family: 'Nunito Sans';
+        font-size: 16px;
+    }
+
+    .step-list-item-content {
+        padding: 20px;
+    }
+
+    .step-list-item-thumb {
+        font-family: 'Archivo';
+        font-size: 40px;
+        font-style: normal;
+        font-weight: 800;
+        line-height: normal;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        background-color: var(--tov-militaris-accent-color);
+        padding: 20px;
+        color:  var(--tov-militaris-soft-background);
+    }
+   
+}
+
+/* Characteristics Section */
+
+.characteristics {
+    background-color: var(--tov-militaris-text-color-contrast);
+    position: relative;
+    z-index: 9;
+    margin-bottom: 30px;
+
+    .section-title {
+        padding: 40px 20px 20px;
+    }
+
+    .icon-bg {
+        background-color: inherit;
+        background-size: cover;
+        mask: url("../../img/militaris/icon-bg.svg");
+        position: absolute;
+        bottom: -54px;
+        left: 0;
+        width: 100%;
+        height: 120px;
+        z-index: -1;
+    }
+}
+
+#militaris-character-slider {
+    margin-bottom: 60px;
+
+    .splide__pagination {
+        bottom: -40px;
+    }
+
+    .splide__pagination__page {
+        background: var(--tov-militaris-text-color);
+        opacity: .2;
+        height: 2px;
+        opacity: 1;
+        width: 15px;
+        margin: 5px;
+    }
+
+    .splide__pagination__page.is-active {
+        background: var(--tov-militaris-accent-color);
+        border-radius: 0;
+        transform: scale(1);
+    }
+
+    .splide__arrow {
+        background-color: var(--tov-militaris-text-color);
+        border: none;
+        border-radius: 0;
+        opacity: .9;
+        width: 40px;
+        height: 40px;
+        transition: background-color .3s ease;
+
+        &:hover {
+            background-color: var(--tov-militaris-primary-color);
+        }
+
+        svg {
+            fill: var(--tov-militaris-text-color-contrast);
+        }
+    }
+
+    .splide__arrow--prev {
+        left: 0;
+    }
+
+    .splide__arrow--next {
+        right: 0;
+    }
+}
+
+.characteristics__list{
+    padding: 0;
+    margin: 20px 0;
+
+    li {
+        padding: 20px;
+        display: flex;
+        flex-direction: row;
+        align-content: center;
+        justify-content: space-between;
+        border-radius: var(--tov-militaris-border-radius);
+        font-style: normal;
+
+        span {
+            font-weight: 800;
+            line-height: 20px;
+        }
+
+        &:nth-child(odd) {
+            background: var(--tov-militaris-soft-background);
+        }
+
+        strong {
+            font-weight: 400;
+        }
+    }
+}
+
+/* Reviews section */
+
+section.reviews{
+    background-color: var(--tov-militaris-accent-color);
+    padding: 20px;
+    margin-bottom: 0;
+    position: relative;
+    z-index: 8;
+
+    .section-title {
+        color: var(--tov-militaris-soft-background);
+    }
+
+    .icon-bg {
+        background-color: inherit;
+        background-size: cover;
+        -webkit-mask: url(../../img/militaris/icon-bg.svg);
+        mask: url(../../img/militaris/icon-bg.svg);
+        position: absolute;
+        bottom: -27px;
+        left: 0;
+        width: 100%;
+        height: 120px;
+        z-index: -1;
+    }
+}
+
+#militaris-reviews-slider {
+    margin: 0 -20px 60px;
+
+    .splide__pagination {
+        bottom: -40px;
+    }
+
+    .splide__pagination__page {
+        background: var(--tov-militaris-text-color-contrast);
+        opacity: .2;
+        height: 2px;
+        width: 15px;
+        margin: 5px;
+    }
+
+    .splide__pagination__page.is-active {
+        opacity: 1;
+        border-radius: 0;
+        transform: scale(1);
+    }
+
+    .splide__arrow {
+        background-color: var(--tov-militaris-text-color);
+        border: none;
+        border-radius: 0;
+        opacity: .9;
+        width: 40px;
+        height: 40px;
+        transition: background-color .3s ease;
+
+        &:hover {
+            background-color: var(--tov-militaris-primary-color);
+        }
+
+        svg {
+            fill: var(--tov-militaris-text-color-contrast);
+        }
+    }
+
+    .splide__arrow--prev {
+        left: 0;
+        top: 30%;
+    }
+
+    .splide__arrow--next {
+        right: 0;
+        top: 30%;
+    }
+}
+
+.review-item-vertical {
+    border-radius: var(--tov-militaris-border-radius);
+    text-align: center;
+}
+
+/* Reviews list */
+
+.review-item-horizontal {
+    margin-bottom: 35px;
+    border-radius: var(--tov-militaris-border-radius);
+    background-color: var(--tov-militaris-text-color-contrast);
+    padding: 20px;
+    position: relative;
+
+    .review-item-content {
+        text-align: center;
+        padding: 0;
+    }
+
+    &:after {
+        content: '';
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 15px 15px 0 0;
+        border-color: var(--tov-militaris-text-color-contrast) transparent transparent transparent;
+        position: absolute;
+        top: 100%;
+        left: 20px;
+        transform: translate(-50%, 0);
+    }
+
+    &:nth-child(odd) {
+        &:after {
+            border-width: 0 15px 15px 0;
+            border-color: transparent var(--tov-militaris-text-color-contrast) transparent transparent;
+            left: unset;
+            right: 20px;
+        }
+    }
+
+    .review-text {
+        padding: 0;
+    }
+
+    .icon {
+        margin-bottom: 20px;
+    }
+}
+.review-text p {
+    font-style: italic;
+}
+.review-item-content {
+    padding: 20px;
+}
+
+.review-item-vertical .review-item-content {
+    margin: 0 20px;
+    background-color: var(--tov-militaris-text-color-contrast);
+    position: relative;
+
+    &:before {
+        content: '';
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 0 10px 12px 10px;
+        border-color: transparent transparent var(--tov-militaris-text-color-contrast) transparent;
+        position: absolute;
+        bottom: 100%;
+        left: 50%;
+        transform: translate(-50%, 0);
+    }
+}
+
+.review-item-vertical .review-author {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+}
+.review-item-avatar{
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+}
+.review-item-vertical .review-author-name {
+    font-size: 16px;
+    font-weight: 800;
+}
+.review-item-horizontal .review-author {
+    display: flex;
+    align-items: center;
+    text-align: left;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+}
+.review-item-horizontal .review-item-avatar {
+    width: 80px;
+    height: 80px;
+}
+.review-item-horizontal .name {
+    font-size: 16px;
+    font-weight: 800;
+    display: block;
+}
+.review-title {
+    font-weight: 800;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+.author-city {
+    display: block;
+    font-size: 14px;
+}
+
+/* How to checkout section */
+
+.how-to-checkout {
+    background-color: var(--tov-militaris-soft-background);
+    position: relative;
+    z-index: 7;
+    margin-bottom: 30px;
+
+    .icon-bg {
+        background-color: inherit;
+        background-size: cover;
+        -webkit-mask: url(../../img/militaris/icon-bg.svg);
+        mask: url(../../img/militaris/icon-bg.svg);
+        position: absolute;
+        bottom: -54px;
+        left: 0;
+        width: 100%;
+        height: 120px;
+        z-index: -1;
+    }
+}
+
+.how-to-checkout .checkout-step {
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+
+    &:last-of-type {
+        padding-bottom: 0;
+
+    }
+
+    &:nth-child(even) {
+        flex-direction: row-reverse;
+
+        .step-description:after {
+            transform: translate(0,-50%) rotate(180deg);
+            left: 100%;
+        }
+    }
+
+    .checkout-step-thumb {
+        background-color: var(--tov-militaris-text-color);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-basis: 50%;
+        position: relative;
+    }
+
+    &:nth-child(2) .checkout-step-thumb {
+        background-color: var(--tov-militaris-primary-color);
+    }
+
+    &:nth-child(3) .checkout-step-thumb {
+        background-color: #71694F;
+    }
+
+    &:nth-child(4) .checkout-step-thumb {
+        background-color: var(--tov-militaris-accent-color);
+    }
+}
+
+.how-to-checkout .step-number {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    text-align: center;
+    font-family: 'Archivo';
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: normal;
+    color: var(--tov-militaris-soft-background);
+    opacity: .3;
+}
+.how-to-checkout .step-description {
+    position: relative;
+    background-color: var(--tov-militaris-text-color-contrast);
+    border-radius: var(--tov-militaris-border-radius);
+    padding: 20px;
+    flex-basis: 50%;
+
+    &:after {
+        content: '';
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 12px 20px 12px 0;
+        border-color: transparent var(--tov-militaris-text-color-contrast) transparent transparent;
+        position: absolute;
+        top: 50%;
+        left: -20px;
+        transform: translate(0, -50%);
+    }
+}
+.how-to-checkout .step-title {
+    font-weight: 800;
+    line-height: 20px;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+.order-form{
+
+    input {
+        padding-left: 70px;
+    }
+
+    input[name="username"] {
+        background-image: url("../../icons/militaris/user.svg");
+        background-repeat: no-repeat;
+        background-position: -1px -1px;
+    }
+
+    input[name="phone"] {
+        background-image: url("../../icons/militaris/phone.svg");
+        background-repeat: no-repeat;
+        background-position: -1px -1px;
+    }
+
+    .form-btn-wrapper {
+        margin-right: -20px;
+        margin-left: -20px;
+    }
+}
+
+/* Footer design */
+
+.site-footer {
+    background-color: var(--tov-militaris-text-color);
+    color: var(--tov-militaris-text-color-contrast);
+    padding: 20px 0;
+}
+.site-footer a {
+    color: var(--tov-militaris-accent-color);
+    transition: color .3s ease;
+
+    &:hover {
+        color: var(--tov-militaris-text-color-contrast);
+        text-decoration: none;
+    }
+}
+.footer-text {
+    text-align: center;
+    padding: 20px;
+}
+.footer-text h4 {
+    margin-bottom: 10px;
+}
+.footer-contacts {
+    display: flex;
+    gap: 20px;
+    flex-direction: column;
+    border-radius: var(--tov-militaris-border-radius);
+}
+
+.footer-contact-item {
+    border-bottom: 1px solid rgba(242, 242, 242, 0.10);
+    padding: 20px 0;
+    color: var(--tov-militaris-soft-background);
+
+    &:last-child {
+        border-bottom: 0;
+    }
+
+    .text {
+        font-weight: 700;
+    }
+}
+
+.footer-icon {
+    fill: var(--tov-militaris-accent-color);
+}
+
+.footer-contacts-menu-wrapper {
+    padding: 20px;
+    display: flex;
+    align-items: center;
+
+    & > * {
+        flex-basis: 50%;
+    }
+}
+.footer-menu ul {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    gap: 20px;
+}
+.footer-menu li {
+    padding-right: 20px;
+}
